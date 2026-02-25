@@ -1,0 +1,56 @@
+<div class="max-w-2xl mx-auto p-6">
+  <h2 class="text-2xl font-bold mb-8 border-b pb-2">Structure du Tour</h2>
+  
+  <dl class="relative border-l-2 border-primary/20 ml-3 space-y-8">
+    <div class="relative pl-8">
+      <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-base-100"></div>
+      
+      <dt class="font-bold text-lg leading-none text-primary">Début</dt>
+      <dd class="mt-2">
+        <div class="flex flex-wrap gap-2">
+          <span class="badge badge-outline">Dégagement</span>
+          <span class="text-gray-400">→</span>
+          <span class="badge badge-outline tooltip tooltip-primary" data-tip="C'est ici que les capacités 'Au début de votre entretien' se déclenchent (ex: la Saga progresse).">Entretien</span>
+          <span class="text-gray-400">→</span>
+          <span class="badge badge-outline">Pioche</span>
+        </div>
+      </dd>
+    </div>
+
+    <div class="relative pl-8">
+      <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-base-100"></div>
+      <dt class="font-bold text-lg leading-none">Phase Principale 1</dt>
+      <dd class="mt-2 text-sm text-base-content/70 italic">
+        Jouer terrains, créatures, rituels...
+      </dd>
+    </div>
+
+    <div class="relative pl-8">
+      <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-error border-4 border-base-100"></div>
+      <dt class="font-bold text-lg leading-none text-error">Combat</dt>
+      <dd class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <div class="bg-base-200 p-2 rounded text-xs">1. Début du combat</div>
+        <div class="bg-base-200 p-2 rounded text-xs">2. Déclaration attaquants</div>
+        <div class="bg-base-200 p-2 rounded text-xs">3. Déclaration bloqueurs</div>
+        <div class="bg-base-200 p-2 rounded text-xs">4. Dégâts de combat</div>
+      </dd>
+    </div>
+
+    <div class="relative pl-8">
+      <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-base-100"></div>
+      <dt class="font-bold text-lg leading-none">Phase Principale 2</dt>
+      <dd class="mt-2 text-sm text-base-content/70 italic">
+        Idem Phase 1 (si pas encore joué de terrain).
+      </dd>
+    </div>
+
+    <div class="relative pl-8">
+      <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gray-500 border-4 border-base-100"></div>
+      <dt class="font-bold text-lg leading-none">Fin du tour</dt>
+      <dd class="mt-2 space-y-1 text-sm">
+        <p>• Effets de fin de tour</p>
+        <p>• Nettoyage (Défausse si > 7 cartes)</p>
+      </dd>
+    </div>
+  </dl>
+</div>

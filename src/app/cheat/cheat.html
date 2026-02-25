@@ -1,0 +1,22 @@
+<h1>Cheat sheet</h1>
+
+<app-phases></app-phases>
+
+<h2>Mots-clés</h2>
+<dl class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  @for (item of keywords; track item.title) {
+    <div class="p-2 rounded-lg odd:bg-black/[0.03] hover:bg-black/[0.06] transition-colors">
+      <dt class="font-bold text-lg">
+        {{ item.title }}
+        @if (item.en) {
+          <span class="text-sm font-normal italic ml-1">
+            ({{ item.en }})
+          </span>
+        }
+      </dt>
+      <dd class="mt-1">
+        {{ item.description }}
+      </dd>
+    </div>
+  }
+</dl>
