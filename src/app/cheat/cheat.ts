@@ -70,6 +70,11 @@ public keywords: Keyword[] = [
     title: "Vol", 
     en: "Flying", 
     description: "Ne peut être bloqué que par des créatures avec le Vol ou la Portée." 
+  },
+  { 
+    title: "Menace", 
+    en: "Menace", 
+    description: "Ne peut être bloquée que par deux créatures ou plus" 
   }
 ].sort((a, b) => a.title.localeCompare(b.title));
 

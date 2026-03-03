@@ -1,0 +1,40 @@
+<div class="form-control">
+    <label class="label cursor-pointer">
+        <input type="checkbox" class="toggle toggle-primary" [checked]="iconOnly" (change)="iconOnly = !iconOnly"/>
+        Icon only
+    </label>
+</div>
+<div class="form-control">
+    <label class="label cursor-pointer">
+        <input type="checkbox" class="toggle toggle-primary" [checked]="checkable" (change)="checkable = !checkable" />
+        Checkable
+    </label>
+</div>
+@if (checkable){
+<div class="form-control">
+    <button type="button" class="btn btn-primary" (click)="hideUnchecked($event)">
+    @if (hidden){
+        <span>Unhide all</span>
+    } @else {
+        <span>Hide unchecked</span>
+    }
+    </button>
+</div>
+}
+<div class="sets-container {{ iconOnly ? 'icon-only' : '' }}">
+@for (s of sets; track s.setName) {
+  <div class="set-card">
+    @if (checkable){<div><input type="checkbox"/></div>}
+
+    <a [href]="s.setLink" target="_blank" rel="noopener">
+      <img [src]="s.imageUrl" [alt]="s.setName" />
+    </a>
+    <div class="set-info">
+      <h3>{{ s.setName }}</h3>
+      <p class="code"><strong>Code :</strong> {{ s.setCode }}</p>
+      <p class="count"><strong>Cartes :</strong> {{ s.cardCount }}</p>
+      <p class="date"><strong>Sortie :</strong> {{ s.releaseDate }}</p>
+    </div>
+  </div>
+}
+</div>
