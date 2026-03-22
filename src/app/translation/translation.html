@@ -1,0 +1,48 @@
+<div class="form-control w-full">
+  <div class="dropdown w-full" [class.dropdown-open]="((results$ | async)?.length ?? 0) > 0 && card === null">
+    <input type="text"
+           placeholder="Enter a card name..."
+           class="input input-bordered w-full"
+           [formControl]="searchControl" />
+    
+    <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-full mt-1 max-h-60 overflow-y-auto border border-base-300">
+      @for (card of results$ | async; track card.en) {
+        <li>
+          <a (mousedown)="selectCard(card)" class="flex justify-between">
+            <span class="font-bold">{{ card.fr }}</span>
+            <span class="text-xs opacity-50 italic">{{ card.en }}</span>
+          </a>
+        </li>
+      } @empty {
+        <li class="disabled"><a>No results...</a></li>
+      }
+    </ul>
+  </div>
+</div>
+
+@if (card) {
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mx-auto p-4">
+    
+    <div class="card-translator group" [cdkCopyToClipboard]="card.fr" (cdkCopyToClipboardCopied)="onCopied('fr')">
+      <div class="lang-badge badge-fr opacity-50">{{ copiedLang() === 'fr' ? 'Copied!' : 'fr' }}</div>
+      <div class="doc-badge badge-fr opacity-50"><a href="https://scryfall.com/search?as=grid&order=name&q={{card.fr}}+lang%3Afr+prefer%3Abest&as=grid&order=name" target="_blank">🪪</a></div>
+      <div class="card-content">
+        <p class="text-2xl font-bold">{{ card.fr }}</p>
+      </div>
+    </div>
+
+    <div class="card-translator group" [cdkCopyToClipboard]="card.en" (cdkCopyToClipboardCopied)="onCopied('en')">
+      <div class="lang-badge badge-en opacity-50">{{ copiedLang() === 'en' ? 'Copied!' : 'en' }}</div>
+      <div class="doc-badge badge-en opacity-50"><a href="https://scryfall.com/search?as=grid&order=name&q={{card.en}}+lang%3Aen+prefer%3Abest&as=grid&order=name" target="_blank">🪪</a></div>
+      <div class="card-content">
+        <p class="text-2xl font-bold">{{ card.en }}</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="text-center">
+    @if (scryfallCard) {
+      <p class="text-sm opacity-50">Current price: <span class="font-bold">{{ scryfallCard.prices.eur ? '€' + scryfallCard.prices.eur : 'N/A' }}</span></p>
+    }
+  </div>
+}

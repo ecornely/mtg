@@ -12,3 +12,29 @@
 
   dt { @apply font-bold; }
 }
+
+.card-translator {
+  @apply relative overflow-hidden bg-base-100 border border-base-300 shadow-xl;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    @apply border-primary/30 -translate-y-1 shadow-2xl;
+  }
+
+  .card-content {
+    @apply text-center mt-4;
+  }
+
+  .lang-badge {
+    @apply absolute top-4 left-4 px-2 py-1 rounded-md text-[14px] font-bold tracking-tighter;
+  }
+
+  .doc-badge {
+    @apply absolute top-4 right-4 px-2 py-1 rounded-md text-[14px] font-bold tracking-tighter;
+  }
+
+  .badge-fr { @apply bg-primary/10 text-primary; }
+  .badge-en { @apply bg-secondary/10 text-secondary; }
+}

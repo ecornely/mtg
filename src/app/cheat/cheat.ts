@@ -17,6 +17,11 @@ public keywords: Keyword[] = [
     description: "Cette créature peut attaquer et s'engager dès le tour où elle arrive sur le champ de bataille." 
   },
   { 
+    title: "Flash", 
+    en: "Flash", 
+    description: "Permet de lancer une carte (créature, artefact, etc.) n'importe quand comme un éphémère." 
+  },
+  { 
     title: "Contact mortel", 
     en: "Deathtouch", 
     description: "N'importe quelle quantité de dégâts infligée à une créature est suffisante pour la détruire." 
@@ -30,6 +35,11 @@ public keywords: Keyword[] = [
     title: "Indestructible", 
     en: "Indestructible", 
     description: "Les effets qui disent 'détruisez' et les dégâts de combat ou de sorts ne détruisent pas cette créature." 
+  },
+  { 
+      title: "Infect", 
+      en: "Infect", 
+      description: "Cette source inflige des blessures aux créatures sous forme de marqueurs -1/-1 et aux joueurs sous forme de marqueurs poison." 
   },
   { 
     title: "Initiative", 

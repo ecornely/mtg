@@ -1,0 +1,9 @@
+{
+  "/search": {
+    "target": "http://localhost:7700",
+    "secure": false,
+    "pathRewrite": {
+      "^/search": "/indexes/dictionary/search"
+    }
+  }
+}

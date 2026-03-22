@@ -1,12 +1,12 @@
 <div class="form-control">
     <label class="label cursor-pointer">
-        <input type="checkbox" class="toggle toggle-primary" [checked]="iconOnly" (change)="iconOnly = !iconOnly"/>
+        <input type="checkbox" class="toggle toggle-primary" [checked]="iconOnly" (change)="toggleIconOnly()"/>
         Icon only
     </label>
 </div>
 <div class="form-control">
     <label class="label cursor-pointer">
-        <input type="checkbox" class="toggle toggle-primary" [checked]="checkable" (change)="checkable = !checkable" />
+        <input type="checkbox" class="toggle toggle-primary" [checked]="checkable" (change)="toggleCheckable()" />
         Checkable
     </label>
 </div>
