@@ -26,7 +26,7 @@
   <div class="set-card">
     @if (checkable){<div><input type="checkbox"/></div>}
 
-    <a [href]="s.setLink" target="_blank" rel="noopener">
+    <a [href]="s.setLink" target="_blank" rel="noopener" (click)="openSet($event, s)">
       <img [src]="s.imageUrl" [alt]="s.setName" />
     </a>
     <div class="set-info">

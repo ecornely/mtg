@@ -56,4 +56,13 @@ export class Sets implements OnInit {
             this.hidden = true;
         }
     }
+
+    public openSet(event: Event, set: CardSet) {
+        event.preventDefault();
+        if (event instanceof MouseEvent && event.shiftKey) {
+            window.open(`https://scryfall.com/sets/${set.setCode.toLocaleLowerCase()}`, '_blank', 'noopener');
+        }else{
+            window.open(set.setLink, '_blank', 'noopener');
+        }
+    }
 }

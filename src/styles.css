@@ -38,3 +38,18 @@
   .badge-fr { @apply bg-primary/10 text-primary; }
   .badge-en { @apply bg-secondary/10 text-secondary; }
 }
+
+.guild-colors{
+  @apply grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4;
+  div {
+    @apply card bg-base-200 p-4 border border-base-300 shadow-sm;
+
+    dt, dd{
+      @apply text-center;
+    }
+
+    dd span{
+      display: none;
+    }
+  }
+}

@@ -2719,6 +2719,22 @@ export class CardSet {
         "setCode": "PRM",
         "cardCount": 15,
         "releaseDate": "2026-02-24"
+    },
+    {
+        "imageUrl": "sets/unknown.png",
+        "setName": "Secrets of Strixhaven",
+        "setLink": "https://gatherer.wizards.com/sets/SOS",
+        "setCode": "SOS",
+        "cardCount": -1,
+        "releaseDate": "2026-04-24"
+    },
+    {
+        "imageUrl": "sets/unknown.png",
+        "setName": "Marvel Super Heroes",
+        "setLink": "https://gatherer.wizards.com/sets/MSH",
+        "setCode": "MSH",
+        "cardCount": -1,
+        "releaseDate": "2026-06-26"
     }
 ]
 
