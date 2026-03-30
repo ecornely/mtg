@@ -1,0 +1,29 @@
+Deck
+1 Coureur de Kavaron (EOE) 139
+1 Pangolin à plaques de minerai (EOE) 150
+1 Gardien de zoo mécan (EOE) 170
+1 Turbodrone de Kavaron (EOE) 141
+1 Pisteuse de trame ardente (EOE) 169
+1 Chercheur de terre kav (EOE) 138
+1 Modificateur moléculaire (EOE) 146
+1 Éclair de plasma (EOE) 152
+1 Moxite fusionnée (EOE) 143
+1 Carnage dévastateur (EOE) 132
+1 Écrabouilleur de champ de débris (EOE) 131
+1 Manœuvres envahissantes (EOE) 137
+1 Kavaron, monde mémorial (EOE) 255
+1 Talent du pourvoyeur (BLB) 6
+1 Hôte du rite des moissons (BLB) 15
+1 Faire le saut (BLB) 16
+1 Gardeterrier aguerri (BLB) 30
+1 Talent du constructeur (BLB) 5
+1 Réaction lapine (BLB) 26
+1 Aîné du terrier (BLB) 37
+1 Unité grièche (BLB) 31
+1 Lumière de bannissement (BLB) 1
+1 Repousser la calamité (BLB) 27
+1 Gâteau à la carotte (BLB) 7
+1 Bannière en patchwork (BLB) 247
+2 Cordillère marquée par les vents (TDM) 271
+7 plaine (ECL) 269
+6 montagne (ECL) 272
