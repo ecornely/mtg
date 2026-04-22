@@ -85,6 +85,21 @@ public keywords: Keyword[] = [
     title: "Menace", 
     en: "Menace", 
     description: "Ne peut être bloquée que par deux créatures ou plus" 
+  },
+  { 
+    title: "Surveillez", 
+    en: "Surveil", 
+    description: "Regardez les N premières cartes de votre bibliothèque, puis mettez n'importe quel nombre d'entre elles dans votre cimetière et le reste au-dessus de votre bibliothèque dans n'importe quel ordre." 
+  },
+  { 
+    title: "Regard", 
+    en: "Scry", 
+    description: "Regardez les N premières cartes de votre bibliothèque, puis mettez n'importe quel nombre d'entre elles au-dessous de votre bibliothèque et le reste au-dessus dans n'importe quel ordre." 
+  },
+  { 
+    title: "Hyperespace", 
+    en: "Warp", 
+    description: "Vous pouvez lancer cette carte pour son coût d'hyperespace. Exilez cette créature au début de la prochaine étape de fin ; vous pourrez la relancer depuis l'exil lors d'un prochain tour pour son coût normal." 
   }
 ].sort((a, b) => a.title.localeCompare(b.title));
 

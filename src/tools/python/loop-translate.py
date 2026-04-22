@@ -89,7 +89,8 @@ def main():
     parser = argparse.ArgumentParser(description="Recherche des termes dans l'index via API POST.")
     
     # Arguments obligatoires et optionnels
-    parser.add_argument("input_file", help="Chemin vers le fichier texte source")
+    parser.add_argument("input_file", type=argparse.FileType('r', encoding='utf-8'), 
+                    help="Chemin vers le fichier texte ou '-' pour lire depuis l'entrée standard (stdin)")
     parser.add_argument("-e", "--env", help="Chemin vers le fichier .env (défaut: .env)", default=".env")
     parser.add_argument("-f", "--format", choices=["en", "fr", "en_full", "fr_full", "both"], default="both",
                         help="Format de sortie : 'en', 'fr' ou 'both' (tab-separated)")
@@ -107,11 +108,7 @@ def main():
     if not url:
         url= "http://localhost:7700/indexes/terms/search"
 
-    if not os.path.exists(args.input_file):
-        print(f"Erreur : Le fichier {args.input_file} n'existe pas.", file=sys.stderr)
-        sys.exit(1)
-
-    with open(args.input_file, 'r', encoding='utf-8') as f:
+    with args.input_file as f:
         for line in f:
             line = line.strip()
             if not line:
