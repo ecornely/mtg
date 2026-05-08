@@ -54,3 +54,11 @@
   margin: 0.25rem 0;
   font-size: 0.85rem;
 }
+
+.upcoming {
+  color: grey;
+}
+
+.current{
+  border: 1px solid var(--color-base-content);
+}

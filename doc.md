@@ -1,7 +1,6 @@
 # Arena
 
 ## Precons decks d'initiations
-
 |         | Nom                      | Anglais             | Couleurs     |
 |---------|--------------------------|---------------------|--------------|
 | ☑️      | Attaque de chats         | Kitty Conduct       |    ⚪, 🟢    | 
@@ -63,3 +62,20 @@ Géant juré aux elfes ×2 — ses tokens 1/1 sont corrects avec les fetch lands
 Un seul Sphinx quantique — vu que c'est ton seul vol pur et une win condition, tu pourrais monter à ×2 si tu l'as en double.
 
 Le palier 3 mana est un peu creux — entre tes dorks et tes 4-drops, tu risques d'avoir des tours morts. Coup d'abattage comble ça partiellement mais ce serait bien d'avoir une créature à 3 mana. As-tu quelque chose comme un Elfes de la forêt profonde ou une créature ramp à 3 mana dans ta collection ?
+
+# TODO
+
+Une fois les commandes sur cardmarket arrivées, envisager de prendre chez https://www.cardmarket.com/en/Magic/Users/Woops/Offers
+* Le préconstruit commander witherbloom
+* Des cartes de la liste interesting
+
+## Cartes à surveiller dans les futures extensions (ajouter à la wishlist):
+* Wood Elves
+* Smaug the magnificent
+* The One Ring  (commander)
+* Orcish Bowmasters  (commander)
+* Tom, Bert, and William  (commander)
+* My Precious (commander)
+
+* The mind stone
+* The soul stone

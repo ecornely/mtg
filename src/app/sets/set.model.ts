@@ -14,6 +14,7 @@ export class CardSet {
     public setCode: string;
     public cardCount: number;
     public releaseDate: string;
+    [key: string]: any;
 
     public static ALL_SETS : CardSet[] = [
     {
@@ -2049,7 +2050,7 @@ export class CardSet {
         "releaseDate": "2022-02-23"
     },
     {
-        "imageUrl": "sets/https://gatherer-static.wizards.com/set_symbols/UNF/large-common-UNF.png",
+        "imageUrl": "sets/large-common-UNF.png",
         "setName": "Unfinity",
         "setLink": "https://gatherer.wizards.com/sets/UNF",
         "setCode": "UNF",
@@ -2166,14 +2167,6 @@ export class CardSet {
         "setLink": "https://gatherer.wizards.com/sets/BOT",
         "setCode": "BOT",
         "cardCount": 58,
-        "releaseDate": "2022-10-18"
-    },
-    {
-        "imageUrl": "sets/BRC.png",
-        "setName": "The Brothers' War Commander",
-        "setLink": "https://gatherer.wizards.com/sets/BRC",
-        "setCode": "BRC",
-        "cardCount": 209,
         "releaseDate": "2022-10-18"
     },
     {
@@ -2718,23 +2711,39 @@ export class CardSet {
         "setLink": "https://gatherer.wizards.com/sets/PRM",
         "setCode": "PRM",
         "cardCount": 15,
-        "releaseDate": "2026-02-24"
+        "releaseDate": "2025-09-26"
     },
     {
-        "imageUrl": "sets/unknown.png",
+        "imageUrl": "sets/large-common-SOS.png",
         "setName": "Secrets of Strixhaven",
         "setLink": "https://gatherer.wizards.com/sets/SOS",
         "setCode": "SOS",
-        "cardCount": -1,
+        "cardCount": 368,
         "releaseDate": "2026-04-24"
     },
     {
-        "imageUrl": "sets/unknown.png",
+        "imageUrl": "sets/unknown-small.png",
         "setName": "Marvel Super Heroes",
         "setLink": "https://gatherer.wizards.com/sets/MSH",
         "setCode": "MSH",
         "cardCount": -1,
         "releaseDate": "2026-06-26"
+    },
+    {
+        "imageUrl": "sets/unknown-small.png",
+        "setName": "The Hobbit",
+        "setLink": "https://gatherer.wizards.com/sets/HOB",
+        "setCode": "HOB",
+        "cardCount": -1,
+        "releaseDate": "2026-08-14"
+    },
+    {
+        "imageUrl": "sets/unknown-small.png",
+        "setName": "Reality Fracture",
+        "setLink": "https://gatherer.wizards.com/sets/FRA",
+        "setCode": "FRA",
+        "cardCount": -1,
+        "releaseDate": "2026-10-02"
     }
 ]
 

@@ -1,5 +1,26 @@
-.strixhaven{
+.strixhaven, .hexhaven{
     font-size: 0.8em;
     font-weight: lighter;
     margin-left: 0.5em;
+}
+dl.guild-colors div {
+    position: relative;
+}
+
+.shard:after, .wedge:after {
+    font-size: 0.5rem;
+    margin-left: 0.5em;
+    font-weight: lighter;
+    position: relative;
+    width: 100%;
+    text-align: right;
+    display: block;
+    top: -55px;
+}
+.shard:after {
+    content: "▷";
+}
+
+.wedge:after {
+    content: "▽";
 }

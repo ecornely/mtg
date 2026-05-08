@@ -1,15 +1,27 @@
-<div class="form-control">
-    <label class="label cursor-pointer">
-        <input type="checkbox" class="toggle toggle-primary" [checked]="iconOnly" (change)="toggleIconOnly()"/>
-        Icon only
-    </label>
+<div class="grid grid-cols-2">
+    <div class="col">
+        <div class="form-control">
+            <label class="label cursor-pointer">
+                <input type="checkbox" class="toggle toggle-primary" [checked]="iconOnly" (change)="toggleIconOnly()"/>
+                Icon only
+            </label>
+        </div>
+        <div class="form-control">
+            <label class="label cursor-pointer">
+                <input type="checkbox" class="toggle toggle-primary" [checked]="checkable" (change)="toggleCheckable()" />
+                Checkable
+            </label>
+        </div>
+    </div>
+    <div class="col">
+        <div class="form-control text-right">
+            <button type="button" class="btn btn-primary" (click)="toggleReverse()">
+                Sort <lucide-icon [name]="reverse ? 'chevron-down' : 'chevron-up'" class="w-4 h-4"></lucide-icon>
+            </button>
+        </div>
+    </div>
 </div>
-<div class="form-control">
-    <label class="label cursor-pointer">
-        <input type="checkbox" class="toggle toggle-primary" [checked]="checkable" (change)="toggleCheckable()" />
-        Checkable
-    </label>
-</div>
+
 @if (checkable){
 <div class="form-control">
     <button type="button" class="btn btn-primary" (click)="hideUnchecked($event)">
@@ -22,8 +34,8 @@
 </div>
 }
 <div class="sets-container {{ iconOnly ? 'icon-only' : '' }}">
-@for (s of sets; track s.setName) {
-  <div class="set-card">
+@for (s of sets; track s.setCode) {
+  <div class="set-card {{s['status']}}">
     @if (checkable){<div><input type="checkbox"/></div>}
 
     <a [href]="s.setLink" target="_blank" rel="noopener" (click)="openSet($event, s)">
