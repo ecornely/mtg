@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Keyword } from './keywork.model';
 import { Phases } from "./phases/phases";
+import { Lands } from "./lands/lands";
 
 @Component({
   selector: 'app-cheat',
-  imports: [Phases],
+  imports: [Phases, Lands],
   templateUrl: './cheat.html',
   styleUrl: './cheat.css',
 })

@@ -79,3 +79,80 @@ Une fois les commandes sur cardmarket arrivées, envisager de prendre chez https
 
 * The mind stone
 * The soul stone
+
+## Faire le tri dans la wishlist lands
+
+### Golgari
+* Deathcap Glade - slowland - golgari
+* Illegitimate Business ou Jungle Hollow - lifegain - golgari
+* Overgrown Tomb - shockland - golgari
+* Blooming Marsh - fastland - golgari - OTJ
+* Wastewood Verge - verge - golgari - DFT
+* Restless Cottage - restless - golgari - WOE
+
+### Other
+     
+#### Selesnya
+     * Blossoming Sands - lifegain - selesnya
+     * Temple Garden - shockland - selesnya
+     * Hushwood Verge - verge - selesnya - DSK
+     * Restless Prairie - restless - selesnya - LCO
+#### Rakdos
+     * Bloodfell Caves - lifegain - rakdos
+     * Blood Crypt - shockland - rakdos
+     * Blazemire Verge - verge - rakdos - DSK
+     * Restless Vents - restless - rakdos - LCI
+#### Simic
+     * Dreamroot Cascade - slowland - simic
+     * Thornwood Falls - lifegain - simic
+     * Breeding Pool - shockland - simic - EOE
+     * Botanical Sanctum - fastland - simic - OTJ
+     * Willowrush Verge - verge - simic - DFT
+     * Restless Vinestalk - restless - simic - WOE
+#### Gruul
+     * Rugged Highlands - lifegain - gruul
+     * Stomping Ground - shockland - gruul - EOE
+     * Thornspire Verge - verge - gruul - DSK
+     * Restless Ridgeline - restless - gruul - LCI
+#### Dimir
+     * Dismal Backwater - lifegain - dimir
+     * Watery Grave - shockland - dimir - EOE
+     * Gloomlake Verge - verge - dimir - DSK
+     * Restless Reef - restless - dimir - LCI
+#### Izzet
+     * Stormcarved Coast - slowland - izzet
+     * Swiftwater Cliffs - lifegain - izzet
+     * Steam Vents - shockland - izzet
+     * Spirebluff Canal - fastland - izzet - OTJ
+     * Riverpyre Verge - verge - izzet - DFT
+     * Restless Spire - restless - izzet - WOE
+#### Orzhov
+     * Shattered Sanctum - slowland - orzhov
+     * Scoured Barrens - lifegain - orzhov
+     * Godless Shrine - shockland - orzhov - EOE
+     * Concealed Courtyard - fastland - orzhov - OTJ
+     * Bleachbone Verge - verge - orzhov - DFT
+     * Restless Fortress - restless - orzhov - WOE
+#### Boros
+     * Sundown Pass - slowland - boros
+     * Wind-Scarred Crag - lifegain - boros
+     * Sacred Foundry - shockland - boros - EOE
+     * Inspiring Vantage - fastland - boros - OTJ
+     * Sunbillow Verge - verge - boros - DFT
+     * Restless Bivouac - restless - boros - WOE
+#### Azorius
+     * Tranquil Cove - lifegain - azorius
+     * Hallowed Fountain - shockland - azorius
+     * Floodfarm Verge - verge - azorius - DSK
+     * Restless Anchorage - restless - azorius - LCI
+
+
+
+## Decks ideas
+### Improve SOS Pest
+Twitching Doll
+Teacher's Pest
+Cauldron of Essence
+Noxious Newt
+Shopkeeper's Bane
+Lord Skitter, Sewer King

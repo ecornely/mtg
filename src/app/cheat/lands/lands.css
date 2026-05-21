@@ -1,0 +1,11 @@
+li.rotation {
+    font-style: italic;
+    color: color-mix(in oklch, var(--color-base-content) 40%, transparent);
+}
+h4 {
+    text-align: center;
+}
+span.fr {
+    font-size: 0.8em;
+    color: color-mix(in oklch, var(--color-base-content) 20%, transparent);
+}

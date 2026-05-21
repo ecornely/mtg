@@ -8,7 +8,7 @@ import { environment } from '../environments/environment';
 export class CardSearchService {
   constructor(private http: HttpClient) {}
 
-  search(query: string): Observable<any[]> {
+  search(query: string, limit: number = 10): Observable<any[]> {
     let headers = new HttpHeaders();
     if (!environment.production && environment.bearer) {
       headers = headers.set('Authorization', `Bearer ${environment.bearer}`);
@@ -16,7 +16,7 @@ export class CardSearchService {
     return this.http.post<any>(environment.apiUrl, 
       { 
         q: query, 
-        limit: 10
+        limit: limit
       }, 
       { headers }
     ).pipe(

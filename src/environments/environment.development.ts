@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
   apiUrl: '/search',
-  bearer: 'e076c0c6561ef0e04495fe0deb264a6db4f14a456db121e9b788aea35165ed8b'
+  bearer: 'ee6bd9fa129354273c1bd4e854bec65fb9a3f37faa0a0b368f64034804828f25'
 };
