@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { concatMap, from, map, Observable, toArray } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -16,9 +16,27 @@ export class ScryfallService {
   }
 
   getCollection(cardIdentifiers: CardIdentifier[]): Observable<ScryfallCard[]> {
-    return this.http
-      .post<CardSearchResults>(`${this.baseUrl}/collection`, { identifiers: cardIdentifiers })
-      .pipe(map((response) => response.data));
+    const CHUNK_SIZE = 70;
+    const chunks: CardIdentifier[][] = [];
+
+    // 1. Chunking : Split the main array into sub-arrays of max CHUNK_SIZE items
+    for (let i = 0; i < cardIdentifiers.length; i += CHUNK_SIZE) {
+      chunks.push(cardIdentifiers.slice(i, i + CHUNK_SIZE));
+    }
+
+    // 2. RxJS Pipeline
+    return from(chunks).pipe(
+      // concatMap ensures requests are executed sequentially (chained)
+      concatMap((chunk) =>
+        this.http
+          .post<CardSearchResults>(`${this.baseUrl}/collection`, { identifiers: chunk })
+          .pipe(map((response) => response.data))
+      ),
+      // toArray waits for all chunks to complete and merges the results into a single array of arrays
+      toArray(),
+      // flatten the array of arrays [ScryfallCard[], ScryfallCard[]] into a single ScryfallCard[]
+      map((nestedResults) => nestedResults.flat())
+    );
   }
 }
 
