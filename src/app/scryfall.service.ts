@@ -1,19 +1,42 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ScryfallService {
 
-  private readonly baseUrl = 'https://api.scryfall.com/cards/named';
+  private readonly baseUrl = 'https://api.scryfall.com/cards';
 
   constructor(private http: HttpClient) {}
 
   getCard(cardName: string): Observable<ScryfallCard> {
-    return this.http.get<ScryfallCard>(`${this.baseUrl}?exact=${encodeURIComponent(cardName)}`);
+    return this.http.get<ScryfallCard>(`${this.baseUrl}/named?exact=${encodeURIComponent(cardName)}`);
   }
+
+  getCollection(cardIdentifiers: CardIdentifier[]): Observable<ScryfallCard[]> {
+    return this.http
+      .post<CardSearchResults>(`${this.baseUrl}/collection`, { identifiers: cardIdentifiers })
+      .pipe(map((response) => response.data));
+  }
+}
+
+export interface CardSearchResults {
+  object: string;
+  not_found?: string[];
+  data: ScryfallCard[];
+}
+
+export interface CardIdentifier {
+  name?: string;
+  id?: string;
+  mtgo_id?: number;
+  multiverse_id?: number;
+  oracle_id?: string;
+  illustration_id?: string;
+  set?: string;
+  collector_number?: string;
 }
 
 export interface ScryfallCard {

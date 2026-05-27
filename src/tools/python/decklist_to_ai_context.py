@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import argparse
 import json
 import re
 import sys
@@ -9,23 +10,21 @@ import urllib.request
 import urllib.error
 
 # Configuration
-INPUT_FILE = "/home/corne/tmp/SOS-Pest_considering.json"
 SCRYFALL_API_URL = "https://api.scryfall.com/cards/collection"
 
 
-def parse_decklist(file_path):
-    """Parses a raw decklist file, filtering out headers and empty lines,
+def parse_decklist(input_stream):
+    """Parses a raw decklist from an input stream (file or stdin),
 
-    and extracts unique card names.
+    filtering out headers and empty lines, and extracts unique card names.
     """
     identifiers = []
     seen_names = set()
 
     try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            lines = f.readlines()
-    except FileNotFoundError:
-        print(f"Error: Input file '{file_path}' not found.")
+        lines = input_stream.readlines()
+    except Exception as e:
+        print(f"Error reading input: {e}", file=sys.stderr)
         return []
 
     for line in lines:
@@ -117,9 +116,9 @@ def fetch_scryfall_data(identifiers):
                     )
 
         except urllib.error.HTTPError as e:
-            print(f"HTTP Error: {e.code} - {e.reason} : {e.readlines()}")
+            print(f"HTTP Error: {e.code} - {e.reason} : {e.readlines()}", file=sys.stderr)
         except Exception as e:
-            print(f"An unexpected error occurred: {e}")
+            print(f"An unexpected error occurred: {e}", file=sys.stderr)
 
         # Respect Scryfall's rate limit guidelines
         time.sleep(0.1)
@@ -128,17 +127,35 @@ def fetch_scryfall_data(identifiers):
 
 
 def main():
-    print(f"Parsing {INPUT_FILE}...")
-    identifiers = parse_decklist(INPUT_FILE)
+    parser = argparse.ArgumentParser(
+        description="Fetch Oracle data from Scryfall based on a MTG decklist."
+    )
+    parser.add_argument(
+        "-i", "--input",
+        type=argparse.FileType("r", encoding="utf-8"),
+        default=sys.stdin,
+        help="Path to the decklist file. If omitted, reads from standard input (stdin)."
+    )
+    
+    # Check if no arguments are provided AND stdin is an interactive terminal (empty/no pipe)
+    if len(sys.argv) == 1 and sys.stdin.isatty():
+        parser.print_help()
+        sys.exit(1)
+        
+    args = parser.parse_args()
+
+    with args.input as input_stream:
+        identifiers = parse_decklist(input_stream)
 
     if not identifiers:
-        print("No cards found to process.")
+        print("No cards found to process.", file=sys.stderr)
         return
 
-    print(f"Found {len(identifiers)} unique cards. Requesting data...")
+    print(f"Found {len(identifiers)} unique cards. Requesting data...", file=sys.stderr)
     deck_data = fetch_scryfall_data(identifiers)
 
     print(json.dumps(deck_data, indent=2, ensure_ascii=False))
+
 
 if __name__ == "__main__":
     main()
