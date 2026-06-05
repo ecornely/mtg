@@ -1,0 +1,149 @@
+<div class="max-w-4xl mx-auto p-4 md:p-6 space-y-8 bg-base-100 text-base-content rounded-xl shadow-lg">
+
+  <div class="hero bg-gradient-to-r from-primary to-secondary text-primary-content rounded-xl p-6 md:p-8 shadow-inner">
+    <div class="hero-content text-center">
+      <div class="max-w-md">
+        <h1 class="text-3xl font-extrabold tracking-tight md:text-4xl mb-2">The Basic Land Game</h1>
+        <p class="text-sm opacity-90 font-medium">
+          Une variante casual de Magic: The Gathering qui se joue en 10 minutes avec uniquement des terrains
+          de base.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <section class="space-y-4">
+    <div class="flex items-center gap-3 border-l-4 border-primary pl-3">
+      <h2 class="text-xl font-bold tracking-tight">Le Matériel & Setup</h2>
+    </div>
+    <p class="text-sm leading-relaxed">
+      Le jeu nécessite un total de <strong>50 terrains de base</strong> (10 de chaque type, hors terrains de type
+      <i>Wastes</i>).
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="card bg-base-200 shadow-sm border border-base-300">
+        <div class="card-body p-5">
+          <h3 class="card-title text-base font-bold text-secondary">Construction des decks</h3>
+          <p class="text-xs leading-relaxed mb-2">Séparez les 50 terrains pour former deux decks identiques de
+            25 cartes. Chaque deck doit contenir exactement :</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="badge badge-outline gap-1 font-semibold text-xs">⚪ 5 Plaines</span>
+            <span class="badge badge-outline gap-1 font-semibold text-xs">🔵 5 Îles</span>
+            <span class="badge badge-outline gap-1 font-semibold text-xs">⚫ 5 Marais</span>
+            <span class="badge badge-outline gap-1 font-semibold text-xs">🔴 5 Montagnes</span>
+            <span class="badge badge-outline gap-1 font-semibold text-xs">🟢 5 Forêts</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-base-200 shadow-sm border border-base-300">
+        <div class="card-body p-5">
+          <h3 class="card-title text-base font-bold text-secondary">Le Départ & Mulligans</h3>
+          <p class="text-xs leading-relaxed">
+            Déterminez aléatoirement qui commence. Chaque joueur mélange son deck et <strong>pioche 3
+              cartes</strong>.
+            Il n'y a pas de mulligans classiques, sauf exceptions stratégiques pour éviter les mains mortes
+            :
+          </p>
+          <ul class="list-disc list-inside text-xs space-y-1 mt-2 opacity-90">
+            <li><strong>Le premier joueur</strong> peut mulliganer si sa main ne contient <i>que</i> des
+              Montagnes et/ou des Forêts.</li>
+            <li><strong>Le second joueur</strong> peut mulliganer si sa main contient <i>uniquement</i> 3
+              Forêts.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <div class="flex items-center gap-3 border-l-4 border-secondary pl-3">
+      <h2 class="text-xl font-bold tracking-tight">Déroulement de la partie</h2>
+    </div>
+    <div class="p-4 bg-base-200 rounded-lg space-y-3">
+      <p class="text-sm leading-relaxed">
+        À chaque tour, vous piochez une carte (sauf le premier joueur au tout premier tour).
+        La seule action possible est de <strong>jouer un terrain de votre main face visible</strong>. Chaque
+        terrain déclenche un effet unique à son arrivée sur le champ de bataille :
+      </p>
+
+      <div class="overflow-x-auto border border-base-300 rounded-lg bg-base-100">
+        <table class="table table-sm w-full">
+          <thead>
+            <tr class="bg-base-200">
+              <th class="text-xs font-bold" style="min-width: 9em;">Terrain</th>
+              <th class="text-xs font-bold text-center">Inspiré de</th>
+              <th class="text-xs font-bold" colspan="2">Effet (Arrivée en jeu)</th>
+            </tr>
+          </thead>
+          <tbody class="text-xs">
+            <tr>
+              <td class="font-bold">Plaine ⚪</td>
+              <td class="text-center opacity-70 italic">Ancestral Recall</td>
+              <td colspan="2">Piochez une carte.</td>
+            </tr>
+            <tr>
+              <td class="font-bold text-success">Forêt 🟢</td>
+              <td class="text-center opacity-70 italic">Regrowth</td>
+              <td colspan="2">Renvoyez la carte de terrain ciblée de votre cimetière dans votre main.</td>
+            </tr>
+            <tr>
+              <td class="font-bold text-error">Montagne 🔴</td>
+              <td class="text-center opacity-70 italic">Stone Rain</td>
+              <td colspan="2">Détruisez le terrain ciblé contrôlé par un adversaire.</td>
+            </tr>
+            <tr>
+              <td class="font-bold" style="color: darkgrey;">Marais ⚫</td>
+              <td class="text-center opacity-70 italic">Blackmail</td>
+              <td colspan="2">L'adversaire choisit 3 cartes de sa main et vous les montre. Vous en
+                choisissez une qu'il doit défausser.</td>
+            </tr>
+            <tr>
+              <td class="font-bold text-info">Île 🔵</td>
+              <td class="text-center opacity-70 italic">Scry 1 / Force of Will</td>
+              <td style="width: 30%;">
+                <strong>En jeu (rituel) :</strong> Regard 1 et on pose l'île<br>
+              </td>
+              <td>
+                <strong>En main (éphémère) :</strong> Contrer la pose d'un terrain adverse. Le joueur doit se défausser en plus de son île d'une carte de la même coleur que le terrain contré.
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4" class="text-center opacity-70 italic text-xs">
+                <span>Note : Le contre peut être contré mais l'adversaire doit donc se défausser de deux îles (celle du contre et celle qui match la couleur du terrain contré)</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <div class="flex items-center gap-3 border-l-4 border-accent pl-3">
+      <h2 class="text-xl font-bold tracking-tight">Conditions de Victoire</h2>
+    </div>
+    <p class="text-sm leading-relaxed">
+      La partie se termine instantanément dès qu'un joueur remplit l'une des deux conditions suivantes :
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center">
+      <div class="p-4 bg-accent/10 border border-accent rounded-xl">
+        <div class="text-2xl mb-1">🌐</div>
+        <div class="font-bold text-sm">Le Domaine Complet</div>
+        <p class="text-xs opacity-80 mt-1">Avoir au moins un exemplaire de chacun des 5 terrains de base en jeu
+          simultanément.</p>
+      </div>
+      <div class="p-4 bg-accent/10 border border-accent rounded-xl">
+        <div class="text-2xl mb-1">🖐️</div>
+        <div class="font-bold text-sm">La Spécialisation</div>
+        <p class="text-xs opacity-80 mt-1">Avoir les 5 exemplaires d'un même type de terrain en jeu
+          simultanément.</p>
+      </div>
+    </div>
+    <div class="alert  text-xs p-3 rounded-lg shadow-sm">
+      <span>ℹ️ <strong>Note sur la pioche :</strong> On ne peut pas perdre par "Deck out". Si votre deck est vide,
+        mélangez simplement votre cimetière pour recréer une bibliothèque.</span>
+    </div>
+  </section>
+</div>

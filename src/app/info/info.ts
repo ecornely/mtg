@@ -56,6 +56,6 @@ export class Info {
   }
 
   private cleanupCardName(name: string): string {
-    return name.replace(/^\s*(\d+)\s+(.*)(:?\s*\((\w{3,})\) (\d+))?/, '$2')
+    return name.trim().replace(/^(?:\d+x?\s+)?(.*?)(?:\s+\([^)]+\))?(?:\s+\d+)?$/, '$1');
   }
 }
